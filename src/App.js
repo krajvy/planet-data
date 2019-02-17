@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import Inputs from './Inputs.js';
+import Outputs from './Outputs.js';
 
 class App extends Component {
   render() {
@@ -49,32 +51,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <fieldset>
-            <legend>Input</legend>
-            <label for="weight">Weight:</label>
-            <input type="text" id="weight"/>
-          </fieldset>
-          <fieldset>
-            <legend>Output</legend>
-            <table>
-              <tr>
-                <th>Symbol</th>
-                <th>Name</th>
-                <th>Weight</th>
-              </tr>
-              { Object.keys(astronomicalObjects).map((name) => {
-                let object = astronomicalObjects[name];
-                return (
-                  <tr>
-                    <td>{ object.symbol }</td>
-                    <td>{ name }</td>
-                    <td>&nbsp;</td>
-                  </tr>
-                )
-              } ) }
-            </table>
-          </fieldset>
+          <h1>Your weight on other planets</h1>
         </header>
+        <Inputs/>
+        <Outputs astronomicalObjects={ astronomicalObjects }/>
       </div>
     );
   }
