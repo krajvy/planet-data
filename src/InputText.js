@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 class InputText extends Component {
   render() {
     return (
-      <fragment>
+      <Fragment>
         <label>{ this.props.name }:
-          <input type="text" value={ this.props.value }/>
+          <input
+            type="text"
+            value={ this.props.value }
+          />
         </label>
-      </fragment>
+      </Fragment>
     )
   }
 }
