@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 class OutputTable extends Component {
+  roundNumber(number) {
+    return number.toFixed(2);
+  }
+
   render() {
     return (
       <table>
@@ -18,7 +22,7 @@ class OutputTable extends Component {
               <tr key={ name }>
                 <td>{ object.symbol }</td>
                 <td>{ name }</td>
-                <td>{ this.props.weight * object.weightRatio }</td>
+                <td>{ this.roundNumber(this.props.weight * object.weightRatio) }</td>
               </tr>
             )
           } ) }
