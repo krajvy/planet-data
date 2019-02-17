@@ -7,6 +7,7 @@ class InputText extends Component {
         <label>{ this.props.name }:
           <input
             type="number"
+            className={ this.props.className }
             defaultValue={ this.props.defaultValue }
             onChange={ this.props.handleWeightChange }
             onKeyPress={ this.props.handleKeyPress }

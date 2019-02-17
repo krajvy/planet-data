@@ -10,9 +10,9 @@ class OutputTable extends Component {
       <table>
         <thead>
           <tr>
-            <th>Symbol</th>
+            <th>Sym.</th>
             <th>Name</th>
-            <th>Weight</th>
+            <th>Weight on surface</th>
           </tr>
         </thead>
         <tbody>
@@ -20,9 +20,9 @@ class OutputTable extends Component {
             let object = this.props.astronomicalObjects[name];
             return (
               <tr key={ name }>
-                <td>{ object.symbol }</td>
-                <td>{ name }</td>
-                <td>{ this.roundNumber(this.props.weight * object.weightRatio) }</td>
+                <td className="symbol">{ object.symbol }</td>
+                <td className="name">{ name }</td>
+                <td className="number">{ this.roundNumber(this.props.weight * object.weightRatio) }</td>
               </tr>
             )
           } ) }

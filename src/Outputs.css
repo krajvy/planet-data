@@ -1,0 +1,18 @@
+.outputs table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.outputs th, .outputs td {
+  border: 1px solid white;
+  padding: 0.3rem 1rem;
+}
+
+.outputs table .symbol {
+  text-align: center;
+  width: 1em;
+}
+
+.outputs table .number {
+  text-align: right;
+}

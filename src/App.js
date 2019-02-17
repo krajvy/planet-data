@@ -74,7 +74,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Your weight on other planets</h1>
+          <h1>Weight on other planets</h1>
         </header>
         <Inputs
           handleWeightChange={ this.handleWeightChange }
