@@ -4,6 +4,29 @@ import Inputs from './Inputs.js';
 import Outputs from './Outputs.js';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      weight: 80
+    };
+
+    this.handleWeightChange = this.handleWeightChange.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+  }
+
+  handleWeightChange(event) {
+    this.setState({
+      weight: event.target.value
+    });
+  }
+  handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      this.handleWeightChange(event);
+    }
+    event.preventDefault();
+  }
+  
   render() {
     let astronomicalObjects = {
       Mercury: {
@@ -47,14 +70,21 @@ class App extends Component {
         orbitalPeriod: 164.8
       }
     };
-    
+
     return (
       <div className="App">
         <header className="App-header">
           <h1>Your weight on other planets</h1>
         </header>
-        <Inputs/>
-        <Outputs astronomicalObjects={ astronomicalObjects }/>
+        <Inputs
+          handleWeightChange={ this.handleWeightChange }
+          handleKeyPress={ this.handleKeyPress }
+          defaultWeight={ 80 }
+        />
+        <Outputs
+          astronomicalObjects={ astronomicalObjects }
+          weight={ this.state.weight }
+        />
       </div>
     );
   }

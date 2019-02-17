@@ -18,7 +18,7 @@ class OutputTable extends Component {
               <tr key={ name }>
                 <td>{ object.symbol }</td>
                 <td>{ name }</td>
-                <td>&nbsp;</td>
+                <td>{ this.props.weight * object.weightRatio }</td>
               </tr>
             )
           } ) }

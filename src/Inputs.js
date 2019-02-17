@@ -6,7 +6,12 @@ class Inputs extends Component {
     return (
       <fieldset>
         <legend>Input</legend>
-        <InputText name="Weight" value="80"/>
+        <InputText
+          name="Weight"
+          defaultValue={ this.props.defaultWeight }
+          handleWeightChange={ this.props.handleWeightChange }
+          handleKeyPress={ this.props.handleKeyPress }
+        />
       </fieldset>
     )
   }

@@ -6,7 +6,10 @@ class Outputs extends Component {
     return (
       <fieldset>
         <legend>Output</legend>
-        <OutputTable astronomicalObjects={ this.props.astronomicalObjects }/>
+        <OutputTable
+          astronomicalObjects={ this.props.astronomicalObjects }
+          weight={ this.props.weight }
+        />
       </fieldset>
     )
   }
