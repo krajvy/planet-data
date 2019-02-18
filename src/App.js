@@ -8,16 +8,23 @@ class App extends Component {
     super(props);
 
     this.state = {
-      weight: 80
+      weight: 80,
+      date: new Date('May 1, 1995')
     };
 
     this.handleWeightChange = this.handleWeightChange.bind(this);
+    this.handleDateChange = this.handleDateChange.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   handleWeightChange(event) {
     this.setState({
       weight: event.target.value
+    });
+  }
+  handleDateChange(date) {
+    this.setState({
+      date: date
     });
   }
   handleKeyPress(event) {
@@ -74,16 +81,19 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Weight on other planets</h1>
+          <h1>Weight and age on other planets</h1>
         </header>
         <Inputs
           handleWeightChange={ this.handleWeightChange }
+          handleDateChange={ this.handleDateChange }
           handleKeyPress={ this.handleKeyPress }
           defaultWeight={ this.state.weight }
+          defaultDate={ this.state.date }
         />
         <Outputs
           astronomicalObjects={ astronomicalObjects }
           weight={ this.state.weight }
+          date={ this.state.date }
         />
       </div>
     );

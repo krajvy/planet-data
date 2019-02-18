@@ -10,6 +10,7 @@ class Outputs extends Component {
         <OutputTable
           astronomicalObjects={ this.props.astronomicalObjects }
           weight={ this.props.weight }
+          date={ this.props.date }
         />
       </fieldset>
     )
