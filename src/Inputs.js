@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import InputText from './InputText.js';
+import InputNumber from './InputNumber.js';
 import './Inputs.css';
 
 class Inputs extends Component {
@@ -7,11 +7,11 @@ class Inputs extends Component {
     return (
       <fieldset className="inputs">
         <legend>Input</legend>
-        <InputText
+        <InputNumber
           name="Weight"
           className="weight"
           defaultValue={ this.props.defaultWeight }
-          handleWeightChange={ this.props.handleWeightChange }
+          handleChange={ this.props.handleWeightChange }
           handleKeyPress={ this.props.handleKeyPress }
         />
       </fieldset>

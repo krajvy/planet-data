@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-class InputText extends Component {
+class InputNumber extends Component {
   render() {
     return (
       <Fragment>
@@ -9,7 +9,7 @@ class InputText extends Component {
             type="number"
             className={ this.props.className }
             defaultValue={ this.props.defaultValue }
-            onChange={ this.props.handleWeightChange }
+            onChange={ this.props.handleChange }
             onKeyPress={ this.props.handleKeyPress }
           />
         </label>
@@ -18,4 +18,4 @@ class InputText extends Component {
   }
 }
 
-export default InputText;
+export default InputNumber;
