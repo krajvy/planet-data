@@ -79,7 +79,7 @@ class App extends Component {
         <Inputs
           handleWeightChange={ this.handleWeightChange }
           handleKeyPress={ this.handleKeyPress }
-          defaultWeight={ 80 }
+          defaultWeight={ this.state.weight }
         />
         <Outputs
           astronomicalObjects={ astronomicalObjects }
